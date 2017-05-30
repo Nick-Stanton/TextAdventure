@@ -3,13 +3,14 @@ import java.util.ArrayList;
 public class Room {
 
 	private boolean found;
-	private ArrayList<String> items;
+	private String[] objects = {"Key", "Sword", "Potion?"};
+	private ArrayList<String> roomObjects;
 	private String description;
 	private String name;
 	
-	public Room(String name, String description){
+	public Room(String name, String description, String[] objects){
 		found = false;
-		items = new ArrayList<String>();
+		roomObjects = new ArrayList<String>();
 		this.description = description;
 		this.name = name;
 	}
@@ -22,8 +23,8 @@ public class Room {
 		return name;
 	}
 	
-	public ArrayList<String> getItems(){
-		return items;
+	public String[] getObjects(){
+		return objects;
 	}
 	
 	public void look(){
